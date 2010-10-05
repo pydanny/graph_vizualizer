@@ -133,21 +133,7 @@ class Graph(object):
         self.nodes.append(node)
         self.nodes_index = [x.index for x in self.nodes]
         return node
-        
-    def set_node(self, node, shape='', style='', going_to='', coming_from=''):
-        """ creates or sets a node. Overwrites the old one.
-            returns the node just to be handy
-         """
-        if not self.node_exists(node):
-            # create the node and add it. maybe take this out?
-            node = self.add_node(node, shape='', style='', going_to='', coming_from='')
-        else:
-            # overwrites the old node with the edited one
-            self.nodes[self.nodes_index.index(node.index)] = node
-            
-        self.nodes_index = [x.index for x in self.nodes]            
-        return node
-                
+                        
     def render(self):
         """
         prints out in graphviz

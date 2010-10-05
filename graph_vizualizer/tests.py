@@ -13,13 +13,13 @@ class TestGraph(unittest.TestCase):
     def test_dupes(self):
         
         graph = Graph()
-        node = Node('alpha','box','basic')
+        node = Node('alpha','box','default')
         graph.add_node(node)
         self.assertRaises(DuplicateNode, graph.add_node, node)               
         
     def test_bad_shape(self):
 
-        self.assertRaises(InvalidShape, Node, 'alpha', 'hoop', 'basic')               
+        self.assertRaises(InvalidShape, Node, 'alpha', 'hoop', 'default')               
 
     def test_bad_style(self):
 
