@@ -1,3 +1,5 @@
 name,shape,style,going to,coming from,,,,,,,,
 alpha,box,default,"beta my friend help me, charlie","friends, jump",,,,,,,,
-beta my friend help me,ellipse,default,"gamma, charlie",sleep,,,,,,,,
+beta my friend help me,ellipse,default,"gamma, charlie",jump,,,,,,,,
+,charlie,diamond,default,gamma,"alpha,delta"
+,delta,box,default,gamma,alpha

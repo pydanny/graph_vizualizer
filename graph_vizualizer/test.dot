@@ -1,15 +1,17 @@
-graph { _2c1743a391305fbf367df8e4f069f9f9 [label="alpha" shape="box"];
+graph {
+edge [ dir="both"];        
+_2c1743a391305fbf367df8e4f069f9f9 [label="alpha" shape="box"];
 _0b84ab823dd13cc9bbfcb77e31a8829b [label="beta my friend help me" shape="ellipse"];
-_0b84ab823dd13cc9bbfcb77e31a8829b -- _c9fab33e9458412c527c3fe8a13ee37d;
-_2c1743a391305fbf367df8e4f069f9f9 -- _ba535ef5a9f7b8bc875812bb081286bb;
-_2c1743a391305fbf367df8e4f069f9f9 -- _28f20a02bf8a021fab4fcec48afb584e;
-_2c1743a391305fbf367df8e4f069f9f9 -- _bf779e0933a882808585d19455cd7937;
-_0b84ab823dd13cc9bbfcb77e31a8829b -- _05b048d7242cb7b8b57cfa3b1d65ecea;
-_2c1743a391305fbf367df8e4f069f9f9 -- _0b84ab823dd13cc9bbfcb77e31a8829b;
-_0b84ab823dd13cc9bbfcb77e31a8829b -- _bf779e0933a882808585d19455cd7937;
+_2c1743a391305fbf367df8e4f069f9f9 -- _bf779e0933a882808585d19455cd7937 [arrowtail="normal" arrowhead="none"];
+_0b84ab823dd13cc9bbfcb77e31a8829b -- _05b048d7242cb7b8b57cfa3b1d65ecea [arrowtail="normal" arrowhead="none"];
+_0b84ab823dd13cc9bbfcb77e31a8829b -- _bf779e0933a882808585d19455cd7937 [arrowtail="normal" arrowhead="none"];
+_2c1743a391305fbf367df8e4f069f9f9 -- _28f20a02bf8a021fab4fcec48afb584e [arrowtail="normal" arrowhead="none"];
+_0b84ab823dd13cc9bbfcb77e31a8829b -- _ba535ef5a9f7b8bc875812bb081286bb [arrowtail="normal" arrowhead="none"];
+_2c1743a391305fbf367df8e4f069f9f9 -- _0b84ab823dd13cc9bbfcb77e31a8829b [arrowtail="normal" arrowhead="none"];
+_2c1743a391305fbf367df8e4f069f9f9 -- _ba535ef5a9f7b8bc875812bb081286bb [arrowtail="normal" arrowhead="none"];
 _ba535ef5a9f7b8bc875812bb081286bb [label="jump" shape="circle"];
 _bf779e0933a882808585d19455cd7937 [label="charlie" shape="circle"];
 _28f20a02bf8a021fab4fcec48afb584e [label="friends" shape="circle"];
 _05b048d7242cb7b8b57cfa3b1d65ecea [label="gamma" shape="circle"];
-_c9fab33e9458412c527c3fe8a13ee37d [label="sleep" shape="circle"];
- }
+ 
+        }

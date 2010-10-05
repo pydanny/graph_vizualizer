@@ -16,7 +16,7 @@ def indexifier(name):
     return '_%s' % hashlib.md5(name.lower().replace(' ','')).hexdigest() 
     
 def edgifier(node, target):
-    return '%s -- %s;' % (node.index, indexifier(target))
+    return '%s -- %s' % (node.index, indexifier(target))
     
 def render_unnode(name):
     return '%s [label="%s" shape="%s"];' % (indexifier(name), name, UNNODE_SHAPE)    
@@ -157,14 +157,40 @@ class Graph(object):
                 edge = edgifier(node, cf)
                 coming_from.add(edge)
         edges = going_to.union(coming_from)
+
+        # check for bi direction edges
+        bothway_edges = set([])
+        single_edges = set([])
         for edge in edges:
+            if edge in bothway_edges:
+                continue
+            reverse = '%s -- %s' % (edge[37:70], edge[0:33])
+            if reverse in edges:
+                # handle bi-direction edges
+                bothway_edges.add(reverse)
+                continue
+            else:
+                single_edges.add(edge)
+                
+        # layout single direction edges                
+        for edge in single_edges:
             text += edge
-            text += '\n'      
+            text += ' [arrowtail="none"];\n'
+            
+        # layout bi-direction edges
+        for edge in bothway_edges:
+            text += edge
+            text += ' [arrowhead="normal" color="red"];\n'
+            
+        # do the unnodes
         for node in unnodes:
             text += render_unnode(node)
             text += '\n'      
         
-        return 'graph {\n %s }' % text
+        return """graph {
+edge [ dir="both"];        
+%s 
+        }""" % text
                 
         
         

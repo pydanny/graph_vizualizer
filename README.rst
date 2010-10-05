@@ -7,8 +7,8 @@ Accepts a CSV and turns it into a Node map. Renders via Graphviz into several fo
 CSV input format
 ----------------
 
-Each line represents a node. Nodes can have shapes and and styles. Node names that are too
-    long are wrapped for convenience. Node elements are:
+Each line represents a node. Nodes can have shapes and and styles. Node names that are too 
+long are wrapped for convenience. Node elements are:
     
     1. name
         string: anything - duplicates no allowed!
