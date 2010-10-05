@@ -21,9 +21,8 @@ def main(csv_file, output):
     records = csv.reader(open(csv_file, 'r'))
     for record in open_csv(csv_file):
         graph.add_node(record[0], record[1], record[2], record[3], record[4])
-    
-    print graph.nodes
-    print graph.nodes[0].going_to
+
+    # TODO - get this to work directly with graphviz rather than a screen print
     print graph.render()
 
 if __name__ == '__main__':
@@ -37,6 +36,8 @@ if __name__ == '__main__':
     if not options.csv_file:
         parser.error("option -c is required! Please provide a target csv file to process!")
     
+    """
+    # TODO - get this working with graphviz directly
     if not options.output:
         parser.error("option -o is required! Please provide an output file target!")
         
@@ -45,8 +46,6 @@ if __name__ == '__main__':
             break
     else:
         parser.error('For option -o please end the file with one of: %s' % ','.join(LEGAL_OUTPUTS))
+    """
     
-    if not options.output:
-        parser.error("option -o is required! Please provide an output file target!")
-
     main(options.csv_file, options.output)
