@@ -17,6 +17,6 @@ Each line represents a node. Nodes can have shapes and and styles. Node names th
     3. style    
         string: default
     4. going to (arrow points away from node) 
-        comma delineated list, case sensitive, duplicates are removed
+        comma delineated list, case insensitive, duplicates are removed
     5. coming from (arrow points to node)
-        comma delineated list, case sensitive, duplicates are removed
+        comma delineated list, case insensitive, duplicates are removed
